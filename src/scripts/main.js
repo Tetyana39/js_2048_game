@@ -54,16 +54,11 @@ function startGame() {
   startButton.classList.add('restart');
 }
 
-function restartGame() {
-  game.restart();
-  renderBoard();
-}
-
 startButton.addEventListener('click', () => {
   if (game.getStatus() === 'idle') {
     startGame();
   } else {
-    restartGame();
+    startGame(); // замість restartGame(), бо ми хочемо одразу старт
   }
 });
 

@@ -40,6 +40,7 @@ class Game {
   }
 
   restart() {
+    // або restart(), залежно від вимог
     if (this._initialState) {
       this.board = this._initialState.map((row) => row.slice());
     } else {
